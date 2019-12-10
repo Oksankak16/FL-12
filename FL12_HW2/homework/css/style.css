@@ -138,6 +138,7 @@ section::before {
   .tm-footer {
     margin: 0;
     padding: 0;
+    background-color: #fff;
   }
   .tm-banner {
     padding: 0;
