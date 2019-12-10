@@ -42,9 +42,11 @@
   list-style-type: lower-alpha;
 }
 .padding-medium a:hover::before {
+  display: inline-block;
   content: ">";
 }
 .padding-medium .text::after {
+  display: inline-block;
   content: "New";
   vertical-align: super;
   color: red;
