@@ -123,13 +123,13 @@ section::before {
   animation: animation 3s;
 }
 @media print {
-  .tm-team-img,
-  .carousel-indicators,
-  #about,
-  .tm-sidebar,
-  .blocks .gallery-container,
-  .img-contact-us,
   #contact,
+  #about,
+  .tm-team-img,
+  .tm-sidebar,
+  .img-contact-us,
+  .carousel-indicators,
+  .blocks .gallery-container,
   section::before,
   .heading ol li .text::after {
     display: none;
