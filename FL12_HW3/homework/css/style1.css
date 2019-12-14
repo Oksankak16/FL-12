@@ -1,0 +1,219 @@
+body {
+  background: #fff;
+  width: 1920px;
+  margin: 0; }
+
+header {
+  background: url(../img/m-h-day.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 720px;
+  border-bottom-right-radius: 40% 40%; }
+  header .header-wrap {
+    margin-left: 190px;
+    padding-top: 18px;
+    display: flexbox;
+    flex-direction: column;
+    height: 525px;
+    width: 600px;
+    color: #2c2f3c; }
+    header .header-wrap .landing-logo {
+      display: flex; }
+      header .header-wrap .landing-logo img {
+        height: 100%; }
+      header .header-wrap .landing-logo p {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 13px;
+        font-weight: bolder;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1.5em;
+        line-height: 30px;
+        letter-spacing: -1.2px; }
+      header .header-wrap .landing-logo span {
+        text-align: center;
+        font-size: 0.5em;
+        line-height: 16px; }
+    header .header-wrap .header_heading {
+      position: relative;
+      font-size: 70px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: bold;
+      line-height: 108%;
+      letter-spacing: 1px;
+      word-spacing: 1px;
+      z-index: 2; }
+      header .header-wrap .header_heading::after {
+        content: "";
+        position: absolute;
+        background-color: #14a0c7;
+        opacity: 0.8;
+        z-index: -1;
+        left: 0px;
+        bottom: 2px;
+        height: 50px;
+        width: 305px; }
+    header .header-wrap .header_text {
+      white-space: pre-line;
+      width: 610px;
+      font-family: 'Fresca', sans-serif;
+      margin-top: -27px;
+      line-height: 135%;
+      word-spacing: 1px; }
+    header .header-wrap .header_button {
+      background-color: #699900;
+      color: white;
+      height: 51px;
+      width: 143px;
+      border: none;
+      border-radius: 2px;
+      margin-top: 47px; }
+    header .header-wrap .login {
+      color: white;
+      margin-left: 150px;
+      font-size: 20px;
+      font-family: 'Source Sans Pro', sans-serif; }
+
+.section {
+  margin: 0 auto;
+  width: 960px; }
+  .section .section_text {
+    text-align: center;
+    color: white;
+    font-size: 39px;
+    margin-left: -42px;
+    font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    z-index: 1; }
+    .section .section_text::after {
+      content: "";
+      position: absolute;
+      background-color: #14a0c7;
+      opacity: 0.8;
+      z-index: -1;
+      left: 51%;
+      bottom: 6px;
+      height: 49px;
+      width: 190px; }
+  .section .section_card_wrap {
+    color: white;
+    margin-left: -70px; }
+    .section .section_card_wrap .section_card {
+      background-color: #3b3f50;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 20px;
+      height: 336px;
+      border-radius: 5px; }
+      .section .section_card_wrap .section_card .section_card_img {
+        width: 100%;
+        margin: 18px; }
+      .section .section_card_wrap .section_card .section_card_right_container {
+        color: #2c2f3c;
+        font-family: 'Hind', sans-serif; }
+        .section .section_card_wrap .section_card .section_card_right_container .section_card_heading {
+          text-align: center;
+          margin-top: 12%;
+          font-size: 22px;
+          margin-left: 40px; }
+        .section .section_card_wrap .section_card .section_card_right_container .section_card_text {
+          text-align: justify;
+          margin-left: 110px;
+          margin-right: 30px;
+          margin-top: 35px; }
+        .section .section_card_wrap .section_card .section_card_right_container .section_link {
+          color: white;
+          margin-left: 50%; }
+  .section .section_banner {
+    background: linear-gradient(to right, #649412, #2e5cd7);
+    width: 1100px;
+    height: 90px;
+    margin-left: -119px;
+    margin-top: 80px;
+    border-radius: 5px;
+    padding: 10px 50px 40px;
+    position: relative;
+    bottom: -75px;
+    z-index: 1; }
+    .section .section_banner .section_banner_text_wrap {
+      display: block;
+      margin-left: 110px; }
+      .section .section_banner .section_banner_text_wrap .section_banner_heading {
+        margin-top: 15px;
+        font-size: 1.9em;
+        font-weight: bold;
+        color: white;
+        position: relative;
+        z-index: 1; }
+        .section .section_banner .section_banner_text_wrap .section_banner_heading:after {
+          content: "";
+          position: absolute;
+          background-color: #14a0c7;
+          opacity: 0.8;
+          z-index: -1;
+          left: 12%;
+          bottom: 0px;
+          height: 49px;
+          width: 70px; }
+    .section .section_banner .section_banner_text {
+      margin-top: 25px;
+      color: #c0c3ce;
+      font-family: 'Hind', sans-serif; }
+  .section .section_banner_button {
+    background-color: #699900;
+    color: white;
+    height: 51px;
+    width: 143px;
+    border: none;
+    border-radius: 2px;
+    float: right;
+    margin-top: -87px;
+    margin-right: 112px; }
+
+.footer {
+  background-color: #3b3f50;
+  height: 250px;
+  padding-left: 192px;
+  font-family: 'Hind', sans-serif;
+  color: white; }
+  .footer .footer-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    align-items: flex-end; }
+    .footer .footer-wrap img {
+      height: 100%; }
+    .footer .footer-wrap .landing-logo {
+      display: flex;
+      margin-bottom: 70px; }
+      .footer .footer-wrap .landing-logo p {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 13px;
+        font-weight: bolder;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1.5em;
+        line-height: 30px;
+        letter-spacing: -1.2px; }
+      .footer .footer-wrap .landing-logo span {
+        text-align: center;
+        font-size: 0.5em;
+        line-height: 16px; }
+  .footer .footer_text {
+    width: 300px;
+    margin-left: 450px;
+    margin-bottom: 65px;
+    font-size: 14px; }
+  .footer .footer-cr {
+    margin-left: 489px;
+    margin-bottom: 72px;
+    font-size: 16px; }
+
+/*# sourceMappingURL=style1.css.map */
