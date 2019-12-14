@@ -47,7 +47,7 @@
 }
 .padding-medium .text::after {
   display: inline-block;
-  content: "New";
+  content:"New";
   text-decoration: none;
   vertical-align: super;
   color: red;
