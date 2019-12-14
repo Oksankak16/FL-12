@@ -13,7 +13,7 @@ header {
   header .header-wrap {
     margin-left: 190px;
     padding-top: 18px;
-    display: flexbox;
+    display: flex;
     flex-direction: column;
     height: 525px;
     width: 600px;
