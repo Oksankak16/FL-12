@@ -1,5 +1,46 @@
-// Write your styles here
-// fontfamily v mixin
+@mixin links($marginSize){
+  color:white;
+  margin-left: $marginSize;
+}
+@mixin buttons($marginsize) {
+  background-color:$buttonColor;
+    color:white;
+    height: 51px;
+  width: 143px;
+  border: none;
+  border-radius: 2px;
+  margin-top: $marginsize;
+}
+$fontFamily:(
+"header":$headerFont,
+"section":$sectionFont,
+"text":$textFont
+);
+@function font($key){
+  @if map-has-key($fontFamily, $key) {
+		@return map-get($fontFamily, $key);
+	}
+	
+	@warn "Unknown `#{$key}` in $fontFamily.";
+	@return null;
+
+}
+%p_text{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 13px;
+  font-weight:bolder;
+  font-family:font("header");
+  line-height: 30px;
+  letter-spacing: -1.2px;
+}
+%span_text{
+  text-align: center;
+        font-size: 0.5em;
+        line-height: 16px;
+}
 body {
   background: $contentBackground;
   width: 1920px;
@@ -26,27 +67,16 @@ header {
         height: 100%;
       }
       p{
-        display: flex;
-        flex-direction: column;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: 13px;
-        font-weight:bolder;
-        font-family:'Source Sans Pro', sans-serif;
-        font-size: 1.5em;
-        line-height: 30px;
-        letter-spacing: -1.2px;
+        @extend %p_text;
       }
       span{
-        text-align: center;
-        font-size: 0.5em;
-        line-height: 16px;
+        @extend %span_text;
       }
     }
     .header_heading {
       position: relative;
       font-size: 70px;
-      font-family:'Source Sans Pro', sans-serif;
+      font-family:font("header");
       font-weight: bold;
       line-height: 108%;
       letter-spacing: 1px;
@@ -67,26 +97,18 @@ header {
     .header_text{
       white-space: pre-line;
       width: 610px;
-      font-family:'Fresca', sans-serif;
+      font-family:font("text");
       margin-top: -27px;
       line-height: 135%;
       word-spacing: 1px;
     }
     .header_button{
-      background-color:$buttonColor;
-      color:white;
-      height: 51px;
-    width: 143px;
-    border: none;
-    border-radius: 2px;
-    margin-top: 47px;
-
+    @include buttons(47px);
     }
     .login{
-      color:white;
-      margin-left: 150px;
+      @include links(150px);
     font-size: 20px;
-    font-family:'Source Sans Pro', sans-serif;
+    font-family:font("header");
     }
   }
 }
@@ -95,11 +117,11 @@ header {
   width: 960px;
   .section_text{
     text-align: center;
-    color:white;
+    color:$colorHeader;
     font-size: 39px;
     margin-left: -42px;
     font-weight: 400;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: font("header");
     position: relative;
     z-index: 1;
     &::after{
@@ -128,8 +150,7 @@ margin-left: -70px;
       width: 100%;
     margin: 18px;}
     .section_card_right_container{
-      color:$colorHeader;
-      font-family: 'Hind', sans-serif;
+      font-family: font("section");
     .section_card_heading{
         text-align:center;
         margin-top: 12%;
@@ -143,8 +164,7 @@ margin-left: -70px;
     margin-top: 35px;
       }
       .section_link{
-        color:white;;
-        margin-left: 50%;
+        @include links(50%);
       }
     }
     }
@@ -191,20 +211,14 @@ margin-left: -70px;
       .section_banner_text {
           margin-top: 25px;
           color: #c0c3ce;
-          font-family: 'Hind', sans-serif;
+          font-family: font("section");
       }   
   }
   
   .section_banner_button {
-    background-color:$buttonColor;
-    color:white;
-    height: 51px;
-  width: 143px;
-  border: none;
-  border-radius: 2px;
-  float: right;
-    margin-top: -87px;
+    float: right;
     margin-right: 112px;
+  @include buttons(-87px);
   }   
 }
 
@@ -212,7 +226,7 @@ margin-left: -70px;
 background-color: $cardBackground;
 height: 250px;
 padding-left: 192px;
-font-family: 'Hind', sans-serif;
+font-family: font("section");
 color: white;
 
 .footer-wrap {
@@ -231,21 +245,10 @@ color: white;
       margin-bottom: 70px;
       
       p{
-        display: flex;
-        flex-direction: column;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: 13px;
-        font-weight:bolder;
-        font-family:'Source Sans Pro', sans-serif;
-        font-size: 1.5em;
-        line-height: 30px;
-        letter-spacing: -1.2px;
+        @extend %p_text;
       }
       span{
-        text-align: center;
-        font-size: 0.5em;
-        line-height: 16px;
+        @extend %span_text;
       }
       }
   }
