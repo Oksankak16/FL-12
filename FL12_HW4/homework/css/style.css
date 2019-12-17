@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-width: 900px;
+    height: 100%;
+}
+header{
+    height: 90px;
+    width: 100%;
+}
+.navigation{
+    height: 100%;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+nav ul{
+    padding-left: 50%;
+    display: flex;
+}
+.navigation h2{
+    text-transform: uppercase;
+    color: #000;
+}
+nav ul li:first-child{
+    padding-left:0;
+}
+nav ul li{
+    list-style-type: none;
+    padding-left:50px;
+    font-size: 16px;
+}
+nav ul li a{
+text-decoration: none;
+color: #777;
+}
+.slider{
+    margin-top: -20%;
+    min-height: 100%;
+    min-width: 100%;
+}
+.slider-wrap{
+    background: url(../img/home-bg.jpg) no-repeat 100%;
+    background-position: 50% 0;
+    width: 100%;
+    min-width: 900px;
+    min-height: 700px;
+    background-size:cover;
+    position: relative;
+    z-index: 1;
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    z-index: 2;
+    margin-top: 20%;
+    min-height: 100vh;
+    min-width: 100%;
+}
+.title h2{
+    font-size: 40px;
+}
+.title h5{
+    margin-top: 40px;
+    color: #bfba55;
+}
+.title button{
+    margin-top: 50px;
+    border-radius: 10px;
+    height: 40px;
+    width: 160px;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+}
+.container{
+    max-width: 640px;
+    padding-top: 100px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+hr{
+    margin-bottom: 60px;
+    width: 100%;
+    border: none; 
+    background:#dbdbd3; 
+    height:1px;
+}
+.section-image{
+    width: 100%;
+}
+.blog-container h2{
+    color: #000;
+}
+.date-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.date-container p{
+    align-content: center;
+    }
+.date-container img{
+height:40px;
+width: 40px;
+border-radius: 20px;
+}
+.blog-container button{
+    margin:40px 0 60px 0;
+    border-radius: 10px;
+    height: 40px;
+    width: 160px;
+    background-color: #FFFFFF;
+    text-transform: uppercase;
+}
+footer{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+}
+.info h2{
+    margin-left: 70px;
+}
+h2{
+    color: #FFFFFF;
+}
+pre{
+    line-height: 15px;
+}
+p, pre{
+    color:#777 
+}
