@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #0b192f;
+  height: 100%;
+  font-family: roboto;
+  box-sizing: border-box;
+}
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  grid-template-columns: 1fr 20px 300px;
+  grid-template-rows: auto 20px auto 20px 1fr 20px 5%;
+  grid-template-areas:
+    "hd hd hd"
+    ". . ."
+    "sc sc sc"
+    ". . ."
+    "mn . as"
+    ". . ."
+    "ft ft ft";
+}
+header {
+  grid-area: hd;
+}
+header {
+  background-color: #024161;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10% 0 5%;
+}
+.logo {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 100;
+}
+.logo p::after {
+  content: "Blog";
+  color: #b62d66;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  width: 400px;
+  justify-content: space-between;
+}
+nav ul li {
+  padding: 30px 30px 30px 30px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+}
+nav ul li:hover {
+  background-color: #1f52a4;
+}
+.hamburger {
+  display: none;
+}
+.hamburger > div {
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+}
+section {
+  grid-area: sc;
+  background: url(../img/post0.jpg);
+  background-position: center 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section-title {
+  color: white;
+  width: 800px;
+  padding: 180px 0 50px 40px;
+}
+.section-title h2 {
+  font-size: 45px;
+  margin-bottom: 2%;
+  font-weight: 200;
+}
+.section-title p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #637779;
+}
+main {
+  grid-area: mn;
+}
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  color: #fff;
+}
+.main-container:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.main-container img {
+  width: 50%;
+}
+.main-container img:hover {
+  opacity: 0.5;
+}
+.main-text:hover {
+  opacity: 0.5;
+}
+.main-text {
+  font-size: 20px;
+  padding: 0 30px 30px 30px;
+}
+.main-title {
+  font-size: 60px;
+  font-weight: 200;
+}
+.date {
+  opacity: 0.5;
+  font-size: 38px;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+.main-container:nth-child(even) .date {
+  top: 15px;
+  left: -20px;
+  width: 100px;
+}
+.last-card {
+  width: 85%;
+}
+.post1 {
+  background: #9d27b0;
+}
+.post2 {
+  background: #9bb800;
+}
+.post3 {
+  background: #ed5120;
+}
+.post4 {
+  background: #9d27b0;
+}
+.post5 {
+  background: #2d95bb;
+}
+aside {
+  grid-area: as;
+  display: flex;
+  flex-direction: column;
+  color: #637779;
+}
+.aside-block {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+}
+.aside-image img {
+  width: 100%;
+}
+.aside-text {
+  margin: 30px;
+  width: 250px;
+}
+.aside-text h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.aside-text p {
+  font-size: 20px;
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: ft;
+  color: #637693;
+  background-color: #024161;
+  font-size: 20px;
+}
+.footer-content {
+  width: 50%;
+  margin-left: 5%;
+}
+.author-content {
+  margin-right: 5%;
+}
+@media screen and (max-width: 768px) {
+  header {
+    display: block;
+    text-align: center;
+  }
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    margin: 25px 0 25px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hamburger div {
+    margin-top: 5px;
+  }
+  .section-title {
+    width: 80%;
+  }
+  .section-title p {
+    font-size: 14px;
+  }
+  .main-container {
+    display: block;
+  }
+  .main-container img {
+    width: 100%;
+  }
+  .main-text {
+    text-align: left;
+  }
+  .main-title {
+    font-size: 35px;
+  }
+  .main-text {
+    font-size: 15px;
+  }
+  .date {
+    font-size: 30px;
+    top: 270px;
+    right: 5px;
+  }
+  .main-container:nth-child(even) .date {
+    top: 500px;
+    right: 20px;
+  }
+  .last-card {
+    display: block;
+  }
+  footer {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 40px;
+  }
+  .footer-content {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper {
+    grid-template-columns: auto;
+    grid-template-rows: auto 20px auto 20px auto auto 20px auto;
+    grid-template-areas:
+      "hd"
+      "."
+      "sc"
+      "."
+      "mn"
+      "as"
+      "."
+      "ft";
+  }
+  .section-title,
+  .main-text,
+  .aside-text {
+    width: 90%;
+  }
+  footer {
+    padding-bottom: 20px;
+  }
+}
