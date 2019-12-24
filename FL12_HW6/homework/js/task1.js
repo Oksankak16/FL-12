@@ -5,10 +5,12 @@ if (isNaN(a) || isNaN(b) || isNaN(c)) {
   alert('Inavalid input data');
 } else {
   let d, x1, x2;
-  d = b * b - 4 * a * c;
+  let two=2;
+  let four=4;
+  d = b * b - four * a * c;
   console.log(d);
-  x1 = (-b + Math.sqrt(d)) / (2 * a);
-  x2 = (-b - Math.sqrt(d)) / (2 * a);
+  x1 = (-b + Math.sqrt(d)) / (two * a);
+  x2 = (-b - Math.sqrt(d)) / (two * a);
   if (d === 0) {
     console.log(x1);
   } else if (d > 0) {
