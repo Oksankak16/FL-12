@@ -81,7 +81,6 @@ class Fighter {
     winner.addWin();
     loser.addLoss();
     console.log(`${winner.getName()} has won!`);
-  
     function getDeadFighter(...fighters) {
       return fighters.find(fighter => fighter.getHealth() === 0);
     }
