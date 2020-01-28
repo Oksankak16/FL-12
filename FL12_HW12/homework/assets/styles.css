@@ -1,0 +1,10 @@
+button{
+   float: right;
+} 
+#addition{
+    display: none;
+}
+#definition{
+    display: none;
+    margin-top: 20px;
+}
